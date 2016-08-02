@@ -14,6 +14,7 @@ namespace SoTour.DataAccess
         {
         }
 
+        public virtual DbSet<Author> Author { get; set; }
         public virtual DbSet<News> News { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

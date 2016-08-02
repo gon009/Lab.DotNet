@@ -17,7 +17,8 @@ namespace SoTour.Core.Models
 
         public DateTime Date { get; set; }
 
-        [StringLength(50)]
-        public string Author { get; set; }
+        public int? AuthorId { get; set; }
+
+        public virtual Author Author { get; set; }
     }
 }
