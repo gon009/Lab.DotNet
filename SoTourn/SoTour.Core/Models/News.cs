@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +10,7 @@ namespace SoTour.Core.Models
         public int Id { get; set; }
 
         [Required]
-        [StringLength(100)]
+        [StringLength(100), DisplayName("Titulito")]
         public string Title { get; set; }
 
         [Column(TypeName = "text")]

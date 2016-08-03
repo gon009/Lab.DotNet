@@ -1,0 +1,26 @@
+﻿@model IEnumerable<SoTour.Core.Models.News>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>News</h2>
+
+<table>
+    <tr>
+        <th>@Html.DisplayNameFor(model => model.Title)</th>
+        <th>Date</th>
+        <th>Author</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Title</td>
+            <td>@item.Date</td>
+            @*<td>@item.Author.Name</td>*@
+            <td></td>
+            <td>@Html.ActionLink("detail", "GetDetail", "News")</td>
+        </tr>
+    }
+</table>
