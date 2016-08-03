@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{855D0418-1A1E-4816-8DF8-E83C21128E81}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoTour.DataAccess", "SoTour.DataAccess\SoTour.DataAccess.csproj", "{E74EDE95-E7F4-4DE7-B8CB-BBB8C553EA55}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoTour.UI", "SoTour.UI\SoTour.UI.csproj", "{5B5CBBEF-7BF4-4A51-BFB9-6D41101A9290}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoTour.DataAccess.Repository", "SoTour.DataAccess.Repository\SoTour.DataAccess.Repository.csproj", "{17B110A0-2601-43D6-86E8-115A4FAC69F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{5B5CBBEF-7BF4-4A51-BFB9-6D41101A9290}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B5CBBEF-7BF4-4A51-BFB9-6D41101A9290}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B5CBBEF-7BF4-4A51-BFB9-6D41101A9290}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17B110A0-2601-43D6-86E8-115A4FAC69F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17B110A0-2601-43D6-86E8-115A4FAC69F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17B110A0-2601-43D6-86E8-115A4FAC69F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17B110A0-2601-43D6-86E8-115A4FAC69F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
