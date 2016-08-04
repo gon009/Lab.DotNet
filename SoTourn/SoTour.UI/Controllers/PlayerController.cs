@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,14 +11,23 @@ namespace SoTour.UI.Controllers
 {
     public class PlayerController : Controller
     {
+        ModelSoTour datasource = new ModelSoTour();
+
         // GET: Player
-        public ActionResult Index()
+        public ActionResult SearchPlayer(string playerName)
         {
-            var datasource = new ModelSoTour();
-            var dataAccess = new PlayerAccess();
-            string playerName ="Jugador";
-            IEnumerable<Player> data = datasource.GetPlayer();
-            return View(data);
+         
+            var players = from s in datasource.Player select s;
+            if (!String.IsNullOrEmpty(playerName))
+            {
+                players = players.Where(s => s.Name.Contains(playerName));
+            }
+
+            
+            //var dataAccess = new PlayerAccess();
+          
+            //IEnumerablek<Player> data = datasource.GetPlayer();
+            return View(players);
         }
     }
 }
