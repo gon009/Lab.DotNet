@@ -4,22 +4,22 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SoTour.Core
 {
-    [Table("Author")]
-    public partial class Author
+    [Table("Club")]
+    public partial class Club
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Author()
+        public Club()
         {
-            News = new HashSet<News>();
+            Player = new HashSet<Player>();
         }
 
         public int Id { get; set; }
 
         [Required]
-        [StringLength(80)]
+        [StringLength(50)]
         public string Name { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<News> News { get; set; }
+        public virtual ICollection<Player> Player { get; set; }
     }
 }

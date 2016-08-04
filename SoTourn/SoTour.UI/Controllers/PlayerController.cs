@@ -6,15 +6,17 @@ using System.Web.Mvc;
 using SoTour.Core;
 using SoTour.DataAccess;
 
-
 namespace SoTour.UI.Controllers
 {
-    public class NewsController : Controller
+    public class PlayerController : Controller
     {
+        // GET: Player
         public ActionResult Index()
         {
             var datasource = new ModelSoTour();
-            IEnumerable<News> data = datasource.GetNews();
+            var dataAccess = new PlayerAccess();
+            string playerName ="Jugador";
+            IEnumerable<Player> data = datasource.GetPlayer();
             return View(data);
         }
     }

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<SoTour.Core.Player>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>News</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        @*@Html.DisplayNameFor(model => model.Name)*@
+        <th>Age</th>
+        <th>Nationality</th>
+        <th>Position</th>
+        <th>Club</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Club.Name</td>
+            <td>@item.Age</td>
+            <td>@item.Nationality</td>
+            <td>@item.Position</td>
+       
+            <td></td>
+      
+        </tr>
+    }
+</table>
