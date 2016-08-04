@@ -71,12 +71,22 @@
       <DependentUpon>ShowNews.feature</DependentUpon>
     </Compile>
     <Compile Include="AcceptanceTests\ShowNewsSteps.cs" />
+    <Compile Include="AcceptanceTests\ShowPlayer.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowPlayer.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptanceTests\ShowPlayerSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="AcceptanceTests\ShowNews.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ShowNews.feature.cs</LastGenOutput>
+    </None>
+    <None Include="AcceptanceTests\ShowPlayer.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ShowPlayer.feature.cs</LastGenOutput>
     </None>
     <None Include="App.config" />
     <None Include="packages.config" />
