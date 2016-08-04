@@ -3,11 +3,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FA2E88C6-66F1-4488-B7DC-3FD6672C48A8}</ProjectGuid>
+    <ProjectGuid>{C3B86114-AC0B-472E-8BFA-287FE4F4BE0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SoTour.UT.Tests</RootNamespace>
-    <AssemblyName>SoTour.UT.Tests</AssemblyName>
+    <RootNamespace>unites2</RootNamespace>
+    <AssemblyName>unites2</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -59,18 +59,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="RepoTest1.cs" />
+    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SoTour.Core\SoTour.Core.csproj">
-      <Project>{2c0ea774-f43c-4bf2-a5e0-258b671ddd63}</Project>
-      <Name>SoTour.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SoTour.DataAccess.Repository\SoTour.DataAccess.Repository.csproj">
-      <Project>{17b110a0-2601-43d6-86e8-115a4fac69f7}</Project>
-      <Name>SoTour.DataAccess.Repository</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
