@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using SoTour.DataAccess;
 using SoTour.Core.Models;
+using SoTour.DataAccess;
 
 namespace SoTour.UI.Controllers
 {
@@ -12,8 +9,8 @@ namespace SoTour.UI.Controllers
     {
         public ActionResult Index()
         {
-            var datasource = new ModelSoTour();
-            IEnumerable<News> data = datasource.GetNews();
+            var newsRepository = new NewsRepository(new SoTourEntities());
+            IEnumerable<NewsWithAuthorsViewModel> data = newsRepository.GetNews();
             return View(data);
         }
     }

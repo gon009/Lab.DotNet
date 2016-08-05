@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SoTour.Core.Models.News>
+﻿@model IEnumerable<SoTour.Core.Models.NewsWithAuthorsViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -18,7 +18,7 @@
         <tr>
             <td>@item.Title</td>
             <td>@item.Date</td>
-            @*<td>@item.Author.Name</td>*@
+            <td>@item.Name</td>
             <td></td>
             <td>@Html.ActionLink("detail", "GetDetail", "News")</td>
         </tr>

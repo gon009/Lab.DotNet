@@ -51,8 +51,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelSoTour.cs" />
+    <Compile Include="Author.cs">
+      <DependentUpon>ModelSoTour.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GetNews_Result.cs">
+      <DependentUpon>ModelSoTour.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSoTour.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSoTour.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSoTour.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSoTour.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSoTour.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSoTour.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="News.cs">
+      <DependentUpon>ModelSoTour.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NewsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SoTour.Core\SoTour.Core.csproj">
@@ -62,7 +87,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <EntityDeploy Include="ModelSoTour.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelSoTour.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelSoTour.edmx.diagram">
+      <DependentUpon>ModelSoTour.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelSoTour.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSoTour.edmx</DependentUpon>
+      <LastGenOutput>ModelSoTour.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelSoTour.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSoTour.edmx</DependentUpon>
+      <LastGenOutput>ModelSoTour.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
