@@ -15,5 +15,10 @@ namespace SoTour.DataAccess.Repository
         {
             return _context.Set<T>();
         }
+
+        public void GetAllTeamsIncludedMatches<T>()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

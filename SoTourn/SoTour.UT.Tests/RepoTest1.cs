@@ -29,5 +29,15 @@ namespace SoTour.UT.Tests
                 Trace.TraceInformation("Team pooints name : {0}", item.name);
             }
         }
+
+        //[TestMethod]
+        //public void Query_GetAllTeamIncludenMatches()
+        //{
+        //    var list = _repository.GetAllTeamsIncludedMatches<team_points>().ToList();
+        //    foreach (var item in list)
+        //    {
+        //        Trace.TraceInformation("Team pooints name : {0}", item.name);
+        //    }
+        //}
     }
 }
